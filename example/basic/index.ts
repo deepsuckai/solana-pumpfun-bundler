@@ -1,6 +1,11 @@
 import dotenv from "dotenv";
 import fs, { openAsBlob } from "fs";
-import { Connection, Keypair, LAMPORTS_PER_SOL, PublicKey } from "@solana/web3.js";
+import {
+  Connection,
+  Keypair,
+  LAMPORTS_PER_SOL,
+  PublicKey,
+} from "@solana/web3.js";
 import { DEFAULT_DECIMALS, PumpFunSDK } from "../../src";
 import NodeWallet from "@coral-xyz/anchor/dist/cjs/nodewallet";
 import { AnchorProvider } from "@coral-xyz/anchor";
@@ -30,11 +35,11 @@ async function createKeypair() {
   const secretKeyBase58 = bs58.encode(secretKey);
 
   const data = {
-    "publicKey": publicKeyBase58,
-    "secretKey": secretKeyBase58
-  }
+    publicKey: publicKeyBase58,
+    secretKey: secretKeyBase58,
+  };
   const metadataString = JSON.stringify(data);
-  const bufferContent = Buffer.from(metadataString, 'utf-8');
+  const bufferContent = Buffer.from(metadataString, "utf-8");
   fs.writeFileSync("./example/basic/.keys/mint.json", bufferContent);
 
   return keypair; // Return the keypair object if needed
@@ -97,7 +102,7 @@ const main = async () => {
       twitter: metadata.twitter,
       telegram: metadata.telegram,
       website: metadata.website,
-      file: await openAsBlob("./upload/bolt.jpg"),
+      file: await openAsBlob("./upload/earthzeta.jpeg"),
     };
 
     let createResults = await sdk.createAndBuy(
@@ -110,7 +115,7 @@ const main = async () => {
       {
         unitLimit: 5_000_000,
         unitPrice: 200_000,
-      },
+      }
     );
 
     if (createResults.confirmed) {
