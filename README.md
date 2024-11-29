@@ -1,13 +1,53 @@
 # PumpFun Bundler with 20 wallets
 Pump.fun bundler that launches token using pumpfun api and buy in the same block with 20 wallets using jito bundle technique.
 The most important part in here is how to configure LUT(Lookup Table Address) and make a transaction using that address.
-## Check by video
+
+# 👤 Contact Me
+
+### Discord: [John Criswick](https://discord.gg/343286332446998530)   
+johncriswick25
+### Telegram: [₿TC-GOD WEB3](https://t.me/opensea712)   
+https://t.me/opensea712
+
+Feel free to contact me if you need any help.
+
+### Check by video
 
 https://github.com/user-attachments/assets/f41cf67e-b09f-457a-a7ec-b0fd8092c6a8
 
 https://github.com/user-attachments/assets/7a35b5d1-7f53-488f-9f4f-340e2d6980b3
 
+### PumpDotFunSDK Class
 
+The `PumpDotFunSDK` class provides methods to interact with the PumpFun protocol. Below are the method signatures and their descriptions.
+
+
+#### createAndBuy
+
+```typescript
+async createAndBuy(
+  creator: Keypair,
+  mint: Keypair,
+  createTokenMetadata: CreateTokenMetadata,
+  buyAmountSol: bigint,
+  slippageBasisPoints: bigint = 500n,
+  priorityFees?: PriorityFee,
+  commitment: Commitment = DEFAULT_COMMITMENT,
+  finality: Finality = DEFAULT_FINALITY
+): Promise<TransactionResult>
+```
+
+- Creates a new token and buys it.
+- **Parameters**:
+  - `creator`: The keypair of the token creator.
+  - `mint`: The keypair of the mint account.
+  - `createTokenMetadata`: Metadata for the token.
+  - `buyAmountSol`: Amount of SOL to buy.
+  - `slippageBasisPoints`: Slippage in basis points (default: 500).
+  - `priorityFees`: Priority fees (optional).
+  - `commitment`: Commitment level (default: DEFAULT_COMMITMENT).
+  - `finality`: Finality level (default: DEFAULT_FINALITY).
+- **Returns**: A promise that resolves to a `TransactionResult`.
 
 ## Contributing
 We welcome contributions! Please submit a pull request or open an issue to discuss any changes.
@@ -16,11 +56,3 @@ We welcome contributions! Please submit a pull request or open an issue to discu
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 If you want a new feature or if you want to increase number of wallet that bundle buy plz contact me.
-
-## 👤 Author
-
-#### Discord: rabnail_15 in discord
-
-#### Twitter: [@Rabnail_SOL](https://twitter.com/Rabnail_SOL)   
-
-#### Telegram: [@Rabnail_SOL](https://t.me/Rabnail_SOL) 
