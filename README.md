@@ -2,12 +2,11 @@
 Pump.fun bundler that launches token using pumpfun api and buy in the same block with 20 wallets using jito bundle technique.
 The most important part in here is how to configure LUT(Lookup Table Address) and make a transaction using that address.
 
-# 👤 Contact Me
+# 👋 Contact Me
 
-### Discord: [John Criswick](https://discord.gg/users/343286332446998530)   
-johncriswick25
-### Telegram: [₿TC-GOD WEB3](https://t.me/opensea712)   
-https://t.me/opensea712
+https://t.me/earthzeta
+### Telegram: [EarthZeta](https://t.me/earthzeta)  
+### Discord: [EarthZeta](https://discord.com/users/339619501081362432)
 
 Feel free to contact me if you need any help.
 
